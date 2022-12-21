@@ -24,7 +24,7 @@ app.put('/:id', (req, res) => {
 
 app.delete('/:id', (req,res)=>{
     const id = req.params.id;
-    data[id] = undefined;
+    delete data[id];
     data = JSON.parse(JSON.stringify(data))
     res.send(data)
 })
